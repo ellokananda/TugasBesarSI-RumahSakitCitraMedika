@@ -42,7 +42,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form class="user" method="post" action="{{ route('login') }}">
+                                    <form class="user" method="post" action="{{ route('login.check') }}">
                                     @csrf
                                         <div class="form-group">
                                             <input type="text" name="username" class="form-control form-control-user"
@@ -60,7 +60,7 @@
                                                     Me</label>
                                             </div>
                                         </div> -->
-                                        <button type="submit" value="login"></button>
+                                        <button type="submit" class="btn btn-primary" value="login"></button>
                                         <hr>
                                         <!-- <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google

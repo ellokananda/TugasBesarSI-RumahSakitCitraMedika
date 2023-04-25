@@ -17,17 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function(){
-    return view('index');
-})->name('dashboard');
 
 Route::get('/login', function () {
     return view('login');
 });
 
-route::post('/login/proses', [LoginController::class , 'login'])->name('login');
+route::post('/login/proses', [LoginController::class , 'login'])->name('login.check');
 // datadokter
 
+Route::get('/admin', function(){
+    return view('index');
+})->name('dashboard');
 
 Route::get('admin/dokter', function(){
     return view('dokter.dokter');

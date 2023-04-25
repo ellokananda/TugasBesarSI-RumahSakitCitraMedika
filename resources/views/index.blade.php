@@ -1,9 +1,10 @@
 @extends('main')
 @section('content')
     <div class="container">
-        <h1>dashboard {{ auth()->user()->username }}</h1>
+        {{-- <h1>dashboard {{ auth()->user()->username }}</h1>
         @if(auth()->user()->role === 1)
             <h1>dokter</h1>
-        @endif
+        @endif --}}
+        <h1>dashboard</h1>
     </div>
 @endsection
