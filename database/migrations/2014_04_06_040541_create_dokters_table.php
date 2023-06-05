@@ -15,17 +15,17 @@ return new class extends Migration
     {
         Schema::create('dokters', function (Blueprint $table) {
             $table->id();
-            $table->string('nip', 50);
-            $table->string('nama_dokter', 100);
-            $table->text('alamat');
-            $table->string('jk', 50);
-            $table->string('telp', 15);
-            $table->string('tempat_lahir', 50);
-            $table->date('date');
-            $table->string('spesialis', 100);
-            $table->date('hari_praktek');
-            $table->time('jam_praktek');
-            $table->string('foto', 200);
+            $table->string('nip', 50)->nullable();
+            $table->string('nama_dokter', 100)->nullable();
+            $table->text('alamat')->nullable();
+            $table->enum('jk', ['Laki-laki','Perempuan'])->nullable();
+            $table->string('telp', 15)->nullable();
+            $table->string('tempat_lahir', 50)->nullable();
+            $table->date('date')->nullable();
+            $table->string('spesialis', 100)->nullable();
+            $table->enum('hari_praktek', ['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Minggu'])->nullable();
+            $table->time('jam_praktek')->nullable();
+            $table->string('foto', 200)->nullable();
             $table->timestamps();
         });
     }

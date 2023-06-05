@@ -20,7 +20,6 @@ return new class extends Migration
             $table->bigInteger('harga');
             $table->bigInteger('stok');
             $table->text('keterangan');
-            $table->string('foto', 200);
             $table->timestamps();
         });
     }

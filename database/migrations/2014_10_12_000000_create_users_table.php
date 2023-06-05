@@ -17,12 +17,13 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('role');
             $table->string('username', 100);
+            $table->string('email', 100);
             $table->string('password', 100);
-            $table->bigInteger('pegawai_id')->unsigned();
+            $table->bigInteger('pegawai_id')->unsigned()->nullable();
             $table->foreign('pegawai_id')->references('id')->on('pegawais');
-            $table->bigInteger('dokter_id')->unsigned();
+            $table->bigInteger('dokter_id')->unsigned()->nullable();
             $table->foreign('dokter_id')->references('id')->on('dokters');
-            $table->bigInteger('pasien_id')->unsigned();
+            $table->bigInteger('pasien_id')->unsigned()->nullable();
             $table->foreign('pasien_id')->references('id')->on('pasiens');
             $table->timestamps();
         });

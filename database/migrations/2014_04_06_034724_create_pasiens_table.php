@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('pasiens', function (Blueprint $table) {
             $table->id();
-            $table->string('nik', 100);
-            $table->string('nama_pasien', 100);
-            $table->string('tempat_lahir', 100);
-            $table->date('date');
-            $table->text('alamat');
-            $table->string('telp', 15);
-            $table->string('jk', 50);            
-            $table->string('status', 100);            
+            $table->string('nik', 100)->nullable();
+            $table->string('nama_pasien', 100)->nullable();
+            $table->string('tempat_lahir', 100)->nullable();
+            $table->date('date')->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('telp', 15)->nullable();
+            $table->enum('jk', ['Laki-laki','Perempuan'])->nullable();           
+            $table->enum('status', ['Rawat Jalan','Rawat Inap'])->nullable();            
             $table->timestamps();
         });
     }

@@ -20,8 +20,8 @@ return new class extends Migration
             $table->bigInteger('total');
             $table->bigInteger('pasien_id')->unsigned();
             $table->foreign('pasien_id')->references('id')->on('pasiens');
-            $table->bigInteger('rekammedis_id')->unsigned();
-            $table->foreign('rekammedis_id')->references('id')->on('rekam_medis');
+            $table->bigInteger('obat_id')->unsigned();
+            $table->foreign('obat_id')->references('id')->on('obats');
             $table->timestamps();
         });
     }
